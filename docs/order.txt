@@ -1,6 +1,22 @@
-************ Volumen del sonido del juego 
+------  Movimiento del juegador
 bundle.js
-línea: 1097
+línea: 383 a 389 (if comentado)
+
+------ Disparos del jugador ------ 
+bundle.js
+línea: 390 a 392 (if comentado)
+
+------ Acumular puntos ------ 
+bundle.js
+línea: 943 a 949 (retornos en cero, valores 10, 20 y 40)
+
+------ Resta de vidas ------
+bundle.js
+línea: 841  ( 	  this.game.defenderLives -= 3;  )
+
+------ Volumen del sonido del juego ------
+bundle.js
+línea: 896
 
 
 ****** Movimiento del jugador
@@ -25,7 +41,7 @@ Esto pasa porque el código que se encarga de disparar está comentado.
 Para modificar este estado, vamos a sacar los comentarios de las líneas 390, 391 y 392
 
 
-*****Acumular puntos
+***** Acumular puntos
 
 Se supone que al disparar y eliminar aliens, tenemos que acumular puntos.
 De hecho, al inicio del juego vemos en la pantalla cuántos puntos deberíamos recibir por cada
@@ -38,8 +54,28 @@ El alien llamado "Soldier" debería devolver (return) 20 puntos.
 El alien llamado "Invader" debería devolver (return) 40 puntos.
 
 
+**** Perdida de VIDAS
+
+Cuando iniciamos el juego, observamos que tenemos 3 vidas disponibles.
+Pero ni bien recibimos el primer impacto por parte del enemigo, notamos que de las 3 vidas
+que teníamos disponibles, bajamos a cero.
+Esto sucede porque en el código, la función que se encarga de restar vidas tiene mal el 
+proceso matemático de la resta.
+Si vemos en la línea 841,
+
+	  this.game.defenderLives -= 3;
+
+ahí tenemos la resta de las vidas disponibles, modifiquemos ese número 3 para
+reemplazarlo por el número 1.
 
 
 
+----- Volumen del juego
 
+El juego tiene efectos de sonidos, pero podemos observar que por más que presionemos el botón
+de muteo nunca tenemos sonido.
+Esto es algo que vamos a tener que modificar en el código del juego.
+Si hacemos Control+F, y buscamos la palabra volume en el archivo bundle.js,
+observamos que en la línea 896, el volumen del juego está el cero.
+Modifiquemos este valor con valores entre 0.1 y 1 para darle volumen al sonido.
 
