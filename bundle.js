@@ -380,16 +380,16 @@
 	};
 	
 	GameView.prototype.moveDefender = function() {
-	
+	/*
 	  if (this.leftPressed) {
-	    this.defender.power([-3,0]);
+	    this.defender.power([-9,0]);
 	  } else if (this.rightPressed) {
-	    this.defender.power([3,0]);
+	    this.defender.power([6,0]);
 	  }
-	
-	  if (this.spacePressed) {
-	    this.defender.fireBullet();
-	  }
+	*/
+	//  if (this.spacePressed) {
+	//    this.defender.fireBullet();
+	//  }
 	};
 	
 	module.exports = GameView;
@@ -942,11 +942,11 @@
 	
 	Ship.prototype.killScore = function() {  // puntaje por matar a la nave
 	  if (this.name === 'grunt') {
-	    return 10;
+	    return 0;
 	  } else if (this.name === 'soldier') {
-	    return 20;
+	    return 0;
 	  } else if (this.name === 'invader') {
-	    return 40;
+	    return 0;
 	  } else if (this.name === 'ufo') {
 	    let ufoPoints = [50, 100, 200, 300, 500];
 	    let idx = Math.random() * 4;

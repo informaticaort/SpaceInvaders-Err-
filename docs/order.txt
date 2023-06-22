@@ -3,5 +3,43 @@ bundle.js
 línea: 1097
 
 
+****** Movimiento del jugador
+
+Cuando empezamos el juego vemos que nuestra nave no se mueve.
+Esto pasa porque el código que se encarga de mover la nave está comentado.
+Para modificar este estado, vamos a sacar los comentarios de las líneas 383 y 389
+
+
+Una vez que se mueve nuestra nave esta lo hace de izquierda a derecha y viceversa.
+Pero para la izquierda se mueve más rápido que para la derecha. Esto es porque en el código
+los valores absolutos de los movimientos son diferentes.
+Vamos a cambiar el valor -9 por el valor -3, para que se mueva más lento a la izquierda.
+Y también vamos a modificar el valor de movimiento hacia la derecha, modificando el número
+6 por 3.
+
+
+**** Disparos del jugador
+
+Cuando empezamos el juego vemos que nuestra nave no dispara.
+Esto pasa porque el código que se encarga de disparar está comentado.
+Para modificar este estado, vamos a sacar los comentarios de las líneas 390, 391 y 392
+
+
+*****Acumular puntos
+
+Se supone que al disparar y eliminar aliens, tenemos que acumular puntos.
+De hecho, al inicio del juego vemos en la pantalla cuántos puntos deberíamos recibir por cada
+tipo de alien que hay en el juego.
+Si revisamos nuetro código, veremos que tenemos una función que se encarga de acumular puntos.
+Esta se encuentra aproximadamente en la línea 943 de nuestro código. 
+Tiene el siguiente encabezado: Ship.prototype.killScore = function() 
+El alien llamado "Grunt" debería devolver (return) 10 puntos.
+El alien llamado "Soldier" debería devolver (return) 20 puntos.
+El alien llamado "Invader" debería devolver (return) 40 puntos.
+
+
+
+
+
 
 
