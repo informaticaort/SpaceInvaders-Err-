@@ -1094,7 +1094,7 @@
 	
 	    var sound = new Howl({
 	      src: [shootSound],
-	      volume: 0.3,    // volumen del juego
+	      volume: 0,    // volumen del juego
 	    });
 	
 	    sound.play();
