@@ -457,7 +457,7 @@
 	  }
 	};
 	
-	Game.prototype.addUfo = function(ctx) {  // agrega el ufo al juego
+	Game.prototype.addUfo = function(ctx) {  // EXTRA 1: agrega el ufo al juego
 
 	  if (this.ufo) { return; }
 	
@@ -667,9 +667,8 @@
 	  );
 	};
 	
-	// Este metodo hace que los enemigos disparen balas
-	Game.prototype.enemyFire = function() {   // hace que los enemigos disparen balas
-	  // las posibilidades de disparo aumenta a medida que la horda se elimina
+	// EXTRA 2: Este metodo hace que los enemigos disparen balas
+	Game.prototype.enemyFire = function() {
 	  let fireChance, invaderCount = this.invaderShips.length;
 	  if (invaderCount < 10) {
 	    fireChance = 500;
@@ -1094,7 +1093,7 @@
 	
 	    var sound = new Howl({
 	      src: [shootSound],
-	      volume: 0,    // volumen del juego
+	      volume: 0.3,    // volumen del juego
 	    });
 	
 	    sound.play();
@@ -1391,6 +1390,7 @@
 	};
 	
 	ShieldPiece.prototype.isCollidedWith = function(otherObject) {
+		
 	  let radiusSum = this.radius + otherObject.radius;
 	  const centerDiff = this.util.dist(this.pos, otherObject.pos);
 	  return centerDiff < radiusSum;
