@@ -837,7 +837,7 @@
 	Ship.prototype.respawn = function() {  // hace que la nave vuelva a aparecer en el juego
 	  this.deathImage();
 	
-	  this.game.defenderLives -= 3;
+	  this.game.defenderLives = this.game.defenderLives-  3;
 	  this.hasThreeGuns = false;
 	  this.hasFiveGuns = false;
 	  this.speedUp = false;
